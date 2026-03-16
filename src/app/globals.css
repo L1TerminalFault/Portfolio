@@ -74,8 +74,36 @@ body {
   }
 }
 
+.slide-up {
+  animation: forwards to-up 0.4s 0s;
+}
+
+@keyframes to-up {
+  from {
+    translate: 0 500px;
+  }
+  to {
+    translate: 0;
+  }
+}
+
+.slide-to-top {
+  animation: forwards to-top 0.7s 0.6s;
+}
+
+@keyframes to-top {
+  from {
+    translate: 0 -100px;
+    opacity: 0;
+  }
+  to {
+    translate: 0;
+    opacity: 1;
+  }
+}
+
 #home {
-  animation: forwards home-slide 1s 0s;
+  animation: forwards home-slide 0.5s 0s;
 }
 
 @keyframes home-slide {
@@ -90,7 +118,7 @@ body {
 }
 
 #projects {
-  animation: forwards projects-slide 1s 0s;
+  animation: forwards projects-slide 0.5s 0s;
 }
 
 @keyframes projects-slide {
@@ -105,7 +133,7 @@ body {
 }
 
 #services {
-  animation: forwards services-slide 1s 0s;
+  animation: forwards services-slide 0.5s 0.2s;
 }
 
 @keyframes services-slide {
@@ -120,7 +148,7 @@ body {
 }
 
 #about {
-  animation: forwards about-slide 1s 0s;
+  animation: forwards about-slide 0.5s 0.4s;
 }
 
 @keyframes about-slide {
@@ -135,7 +163,7 @@ body {
 }
 
 #contact {
-  animation: forwards contact-slide 1s 0s;
+  animation: forwards contact-slide 0.5s 0.6s;
 }
 
 @keyframes contact-slide {
@@ -147,4 +175,26 @@ body {
     translate: 0;
     opacity: 1;
   }
+}
+
+.fade-in {
+  animation: forwards fade-in 1s 0.8s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
 }
