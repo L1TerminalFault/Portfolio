@@ -24,7 +24,7 @@ const preferredTechStack = [
     name: "TailwindCSS",
     icon: TailwindCSSIcon,
     detail:
-      "Styling engine for all non-animation categories, for the animations native CSS is used",
+      "Styling engine for all stylings with quick and reliable usage",
   },
   {
     name: "MongoDB",
@@ -54,12 +54,12 @@ export default function Home() {
                 {preferredTechStack.map((each) => (
                   <div
                     key={each.name}
-                    className="flex gap-2 group items-center group rounded-2xl bg-white/5 transition-colors hover:bg-white/10 pr-4 text-gray-400"
+                    className="flex gap-2 group items-center group rounded-2xl bg-white/5 max-w-0 transition-colors hover:bg-white/10 pr-4 text-gray-400"
                   >
                     <Image alt="" src={each.icon} className="size-6" />
                     {each.name}
 
-                    <div className="absolute max-md:left-0 translate-y-20 z-30 backdrop-blur-3xl group-hover:/ max-w-120 max-h-0 group-hover:max-h-40 max-w-0 rounded-2xl flex overflow-hidden gap-4 group-hover:p-6 opacity-0 group-hover:opacity-100 bg-gray-900/90 transition-all duration-300 shadow-lg shadow-black/50">
+                    <div className="absolute max-md:left-0 translate-y-20 z-30 backdrop-blur-xl bg-gray-900/90 /bg-white/5 max-w-120 max-h-0 group-hover:max-h-40 rounded-2xl flex overflow-hidden gap-4 group-hover:p-6 opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-lg shadow-black/50">
                       <div className="shrink-0">
                         <Image alt="" src={each.icon} className="size-18" />
                       </div>
