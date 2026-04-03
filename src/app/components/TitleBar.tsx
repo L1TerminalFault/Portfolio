@@ -7,7 +7,7 @@ import Link from "next/link";
 const routes = [
   { name: "Home", path: "/home" },
   { name: "Projects", path: "/projects" },
-  { name: "Services", path: "/services" },
+  // { name: "Services", path: "/services" },
   { name: "About", path: "/about" },
   { name: "Contact", path: "/contact" },
 ];
@@ -39,6 +39,7 @@ export default function TitleBar() {
 
     if (hoverFollower) {
       hoverFollower.style.display = "block";
+      hoverFollower.style.opacity = "100%";
 
       if (hoverElement) {
         const hovered = document.getElementById(hoverElement);
@@ -50,6 +51,11 @@ export default function TitleBar() {
       } else {
         hoverFollower.style.left = `${currentCord?.x}px`;
         hoverFollower.style.width = `${currentElm?.clientWidth}px`;
+
+        setTimeout(() => {
+          if (follower?.style.left === hoverFollower.style.left)
+            hoverFollower.style.opacity = "0";
+        }, 200);
       }
     }
 
@@ -64,11 +70,12 @@ export default function TitleBar() {
     <div className="absolute z-20 flex justify-center top-0 w-full p-3 #backdrop-blur-2xl">
       <div
         id="select-follower"
-        className="absolute hidden md:p-4 p-3 rounded-lg mt-4 bg-white/5 border-t border-white/10 shadow shadow-gray-950 transition-all duration-500"
+        className="absolute hidden md:p-4 p-3 rounded-lg mt-4 bg-linear-to-t from-white/3 to-white/10 border-t border-white/10 shadow shadow-black/50 transition-all duration-500"
       ></div>
+
       <div
         id="hover-follower"
-        className="absolute hidden md:p-4 p-3 rounded-lg mt-4 bg-white/5 transition-all duration-500"
+        className="absolute hidden md:p-4 p-3 rounded-lg mt-4 bg-linear-to-t from-white/2 to-white/9 border-t border-white/9 shadow shadow-black/30 transition-all duration-500"
       ></div>
 
       <div className="flex sm:gap-6 gap-2 justify-around px-12 p-4 relative transition-all">
@@ -78,7 +85,11 @@ export default function TitleBar() {
             id={route.name.toLowerCase()}
             href={pathname.includes(route.path) ? "" : route.path}
             className={`${pathname.includes(route.path) ? "text-white /underline underline-offset-5" : "text-gray-400 /hover:bg-white/5"} transition-all opacity-0 duration-200 md:px-4 px-3 active:px-2 max-md:text-xs p-1 rounded-lg //hover:bg-white/10`}
-            onMouseEnter={() => setHoverElement(route.name.toLowerCase())}
+            onMouseEnter={() =>
+              pathname.includes(route.path)
+                ? null
+                : setHoverElement(route.name.toLowerCase())
+            }
             onMouseLeave={() => setHoverElement(null)}
           >
             {route.name}
