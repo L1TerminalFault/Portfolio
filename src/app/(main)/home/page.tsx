@@ -79,7 +79,7 @@ export default function Home() {
             <div className="flex flex-col pb-30 gap-4 w-full /h-full justify-end pointer-events-none">
               <div className="text-5xl/tight slide-to-bottom max-lg:text-4xl/tight max-sm:text-xl/tight font-bold">
                 <SplitText
-                  text="Rex renderer X on l, NextJs developer"
+                  text="Kaleab Mengesha, NextJs developer"
                   className=""
                   delay={50}
                   duration={1.25}
