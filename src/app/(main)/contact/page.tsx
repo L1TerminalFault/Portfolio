@@ -23,7 +23,7 @@ const contactList = [
   },
   {
     name: "LinkedIn",
-    detail: "linuxkali717@gmail.com",
+    detail: "https://www.linkedin.com/in/kaleab-mengesha-901480348",
     icon: linkedinIcon,
   },
 ]
