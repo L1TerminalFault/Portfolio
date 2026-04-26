@@ -10,6 +10,7 @@ import MongoDBIcon from "@/../public/mongodb.ico";
 import ClerkIcon from "@/../public/clerk.png";
 import TiltedCard from "@/app/components/TiltedCard";
 import { projects, projectStatuses, techStacks } from "@/lib/utils";
+import noImage from "@/../public/no-image.png";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -149,7 +150,7 @@ export default function Home() {
                     <div className="absolute h-full z-0 w-max group-hover:scale-[102%] transition-all duration-400">
                       <Image
                         alt=""
-                        src={projects[0].image}
+                        src={projects[0].image || noImage}
                         className="w-full h-full"
                       />
                     </div>
