@@ -31,7 +31,7 @@ export default function Projects() {
               key={eachCat.index}
               className={`relative flex flex-col w-full h-max gap-4 ${projects.find((project) => eachCat.index === project.category) ? "" : "hidden"}`}
             >
-              <div className="text-gray-400 2xl:pl-50 pl-14 flex justify-center w-max px-5 py-2 rounded-full backdrop-blur-xl bg-white/5 gap-2 z-40 items-center top-0 sticky">
+              <div className="text-gray-400 2xl:ml-50 ml-14 flex justify-center w-max px-7 py-2 rounded-full backdrop-blur-xl bg-white/5 gap-2 z-40 items-center top-0 sticky">
                 {eachCat.text}
                 <GoDotFill className="text-[6px] text-center" />
                 {
