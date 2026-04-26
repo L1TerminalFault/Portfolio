@@ -17,7 +17,7 @@ export default function MainLayout({
         </div>
 	{/*<div className="absolute z-10 flex flex-col /backdrop-blur-lg w-full h-full bg-black/20">*/}
           <TitleBar />
-          <div className="pt-24 p-9 w-full h-full //bg-gray-950 ">
+          <div className="w-full h-full //bg-gray-950 ">
             {children}
           </div>
           <FloatingElement />

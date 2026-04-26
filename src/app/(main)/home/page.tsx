@@ -43,7 +43,7 @@ const preferredTechStack = [
 
 export default function Home() {
   return (
-    <div className="flex relative flex-col slide-to-left w-full h-full">
+    <div className="flex pt-24 p-9 relative flex-col slide-to-left w-full h-full">
       <div className="flex w-full h-full items-center justify-center">
         {/* NOTE: Edit global padding just on this div */}
         <div className="flex max-[850px]:flex-col gap-8 max-w-425 scrollbar-hidden overflow-scroll max-md:py-40 sm:p-8 md:p-12 lg:p-16 xl:p-30 md:items-baseline-last items-end justify-center w-full h-full">
