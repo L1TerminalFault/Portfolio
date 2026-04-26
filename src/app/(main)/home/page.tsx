@@ -43,8 +43,8 @@ export default function Home() {
     <div className="flex relative flex-col slide-to-left w-full h-full">
       <div className="flex w-full h-full items-center justify-center">
         {/* NOTE: Edit global padding just on this div */}
-        <div className="flex max-sm:flex-col-reverse gap-8 max-w-425 scrollbar-hidden overflow-scroll p-0 sm:p-8 md:p-12 lg:p-16 xl:p-30  items-end justify-center w-full h-full">
-          <div className="w-full h-full flex flex-col gap-30 max-2xl:gap-20 max-lg:gap-10 items-center justify-end max-sm:justify-start">
+        <div className="flex max-[850px]:flex-col gap-8 max-w-425 scrollbar-hidden overflow-scroll max-md:py-40 sm:p-8 md:p-12 lg:p-16 xl:p-30 md:items-baseline-last items-end justify-center w-full h-full">
+          <div className="w-full h-full flex flex-col pt-30 pb-5 gap-30 max-2xl:gap-20 max-lg:gap-10 items-center justify-end /max-sm:justify-start">
             <div className="flex flex-col gap-1 h-max pl-3 w-full z-40 text-gray-400 text-xs fade-in opacity-0">
               <div className="px-1">Preferred Tech Stack</div>
 
@@ -74,7 +74,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col pb-30 gap-4 w-full /h-full justify-end pointer-events-none">
+            <div className="flex flex-col pb-30/ gap-4 w-full /h-full justify-end pointer-events-none">
               <div className="text-5xl/tight slide-to-bottom max-lg:text-4xl/tight max-sm:text-xl/tight font-bold">
                 <SplitText
                   text="Kaleab Mengesha, NextJs developer"
@@ -103,12 +103,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="w-full h-full z-20 /max-xl:h-4/5 flex items-end justify-center">
+          <div className="relative w-full h-full z-20 /max-xl:h-4/5 flex items-end justify-center">
             <TiltedCard
             // rotateAmplitude={12}
             // scaleOnHover={1.05}
             >
-              <div className="flex slide-to-top opacity-0 items-center w-full px-5 h-full group max-h-190">
+              <div className="flex min-h-80 slide-to-top opacity-0 items-center w-full px-5 h-full group max-h-190">
                 <div className="bg-[#ffffff15] p-2 rounded-2xl backdrop-blur-xl lg:rounded-4xl w-full flex-1 h-full justify-end flex flex-col">
                   <div className="p-2 px-4 text-gray-400 flex justify-between">
                     Top Project

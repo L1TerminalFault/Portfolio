@@ -2,6 +2,8 @@
 
 import DarkVeil from "../components/DarkVeilBackground";
 import TitleBar from "../components/TitleBar";
+import NavBar from "../components/NavBar";
+import FloatingElement from "../components/FloatingElement";
 // import ShapeGrid from "../components/ShapeGrid";
 
 export default function MainLayout({
@@ -18,6 +20,8 @@ export default function MainLayout({
           <div className="pt-24 p-9 w-full h-full //bg-gray-950 ">
             {children}
           </div>
+          <FloatingElement />
+          <NavBar />
           {/* <div className="absolute bottom-0 opacity-20 w-full"> */}
           {/*   <ShapeGrid speed={0.1} /> */}
           {/* </div> */}

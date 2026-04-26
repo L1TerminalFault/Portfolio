@@ -1,15 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const routes = [
   { name: "Home", path: "/home" },
   { name: "Projects", path: "/projects" },
-  // { name: "Services", path: "/services" },
-  { name: "About", path: "/about" },
-  { name: "Contact", path: "/contact" },
+  { name: "Services", path: "/services" },
+  // { name: "About", path: "/about" },
+  // { name: "Contact", path: "/contact" },
 ];
 
 export default function TitleBar() {
@@ -19,7 +19,7 @@ export default function TitleBar() {
 
   useEffect(() => {
     window.addEventListener("resize", () => {
-      setUpdatePosition(Math.random());
+      setTimeout(() => setUpdatePosition(Math.random()), 1000);
     });
 
     let counter = 0;
@@ -47,6 +47,7 @@ export default function TitleBar() {
 
         hoverFollower.style.left = `${hoveredCoord?.x}px`;
         hoverFollower.style.width = `${hovered?.clientWidth}px`;
+        hoverFollower.style.height = `${hovered?.clientHeight}px`;
         hoverFollower.style.display = "block";
       } else {
         hoverFollower.style.left = `${currentCord?.x}px`;
@@ -62,39 +63,55 @@ export default function TitleBar() {
     if (follower) {
       follower.style.left = `${currentCord?.x}px`;
       follower.style.width = `${currentElm?.clientWidth}px`;
+      follower.style.height = `${currentElm?.clientHeight}px`;
       follower.style.display = "block";
     }
   }, [pathname, updatePosition, hoverElement]);
 
   return (
-    <div className="absolute z-20 flex justify-center top-0 w-full p-3 #backdrop-blur-2xl">
+    <div className="absolute w-full flex justify-center py-6 px-12 z-20 top-0">
       <div
         id="select-follower"
-        className="absolute hidden md:p-4 p-3 rounded-lg mt-4 bg-linear-to-t from-white/3 to-white/10 border-t border-white/10 shadow shadow-black/50 transition-all duration-500"
+        className="absolute hidden rounded-full bg-white/6 translate-y-3.5 z-25 pointer-events-none duration-400 transition-all"
       ></div>
 
       <div
         id="hover-follower"
-        className="absolute hidden md:p-4 p-3 rounded-lg mt-4 bg-linear-to-t from-white/2 to-white/9 border-t border-white/9 shadow shadow-black/30 transition-all duration-500"
+        className="absolute hidden rounded-full bg-white/5 translate-y-3.5 z-20 pointer-events-none duration-400 transition-all"
       ></div>
 
-      <div className="flex sm:gap-6 gap-2 justify-around px-12 p-4 relative transition-all">
-        {routes.map((route) => (
-          <Link
-            key={route.name}
-            id={route.name.toLowerCase()}
-            href={pathname.includes(route.path) ? "" : route.path}
-            className={`${pathname.includes(route.path) ? "text-white /underline underline-offset-5" : "text-gray-400 /hover:bg-white/5"} transition-all opacity-0 duration-200 md:px-4 px-3 active:px-2 max-md:text-xs p-1 rounded-lg //hover:bg-white/10`}
-            onMouseEnter={() =>
-              pathname.includes(route.path)
-                ? null
-                : setHoverElement(route.name.toLowerCase())
-            }
-            onMouseLeave={() => setHoverElement(null)}
-          >
-            {route.name}
-          </Link>
-        ))}
+      <div className="relative w-full flex justify-between shadow-lg shadow-black/50 xl:w-7/8 /xl:justify-around transition-all rounded-full py-2 px-2 backdrop-blur-2xl bg-white/4">
+        <Link
+          href="/"
+          className="flex gap-2 items-center px-8 hover:bg-white/2 transition-colors rounded-full"
+        >
+          <div className="text-2xl font-semibold max-md:text-xl">Portfolio</div>
+          <div className="size-2 blur-[2px] rounded-full animate-pulse bg-orange-500" />
+        </Link>
+        <div className="flex gap-4 max-[850px]:hidden rounded-full bg-[#00000b] relative p-1.5 items-center">
+          {routes.map((route) => (
+            <Link
+              key={route.name}
+              id={route.name.toLowerCase()}
+              href={pathname.includes(route.path) ? "" : route.path}
+              className={`${pathname.includes(route.path) ? "text-white" : "text-gray-400"} rounded-full px-6 py-1.5 transition-all`}
+              onMouseEnter={() =>
+                pathname.includes(route.path)
+                  ? null
+                  : setHoverElement(route.name.toLowerCase())
+              }
+              onMouseLeave={() => setHoverElement(null)}
+            >
+              {route.name}
+            </Link>
+          ))}
+        </div>
+        <Link
+          href="/"
+          className="py-2 px-6 items-center max-lg:text-sm flex bg-gray-950 rounded-full hover:bg-gray-950/65 active:bg-gray-950/60 transition-all"
+        >
+          Hire Me
+        </Link>
       </div>
     </div>
   );
