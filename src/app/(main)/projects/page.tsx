@@ -23,9 +23,9 @@ export const metadata: Metadata = {
 
 export default function Projects() {
   return (
-    <div className="flex w-full h-full pt-24 p-9 slide-to-left items-center justify-center">
+    <div className="flex w-full h-full slide-to-left items-center justify-center">
       <div className="flex w-full h-full max-w-425">
-        <div className="relative flex flex-col gap-9 w-full h-full overflow-scroll scrollbar-hidden">
+        <div className="relative flex flex-col gap-9 w-full h-full pt-24 p-9 overflow-scroll scrollbar-hidden">
           {projectCategories.map((eachCat) => (
             <div
               key={eachCat.index}
