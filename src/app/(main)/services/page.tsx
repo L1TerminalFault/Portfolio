@@ -31,7 +31,7 @@ const serviceList = [
 export default function Services() {
   return <div className="flex slide-to-left items-center justify-center w-full h-full">
     <div className="flex flex-col items-center max-w-250 w-full h-full py-35 px-10 gap-5">
-    {serviceList.map((eachService: IconType) => <div className="flex items-center px-12 py-8  rounded-full backdrop-blur-3xl bg-white/7 w-full gap-4">
+    {serviceList.map((eachService) => <div className="flex items-center px-12 py-8  rounded-full backdrop-blur-3xl bg-white/7 w-full gap-4">
         <eachService.icon className="size-20" />
 	<div className="flex flex-col gap-3">
 	  <div className="text-lg">{eachService.name}</div>
