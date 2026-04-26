@@ -77,7 +77,7 @@ export default function Projects() {
 					width={1080}
 					height={720}
                               src={project.image || noImage}
-                              className="w-full max-xl:max-h-[70vh] min-h-[50vh] h-full"
+                              className={`w-full ${project.image ? "" : "opacity-30"} max-xl:max-h-[70vh] min-h-[50vh] h-full`}
                             />
                           </div>
 
