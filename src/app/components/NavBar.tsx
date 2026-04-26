@@ -81,7 +81,7 @@ export default function NavBar() {
         className="absolute hidden rounded-full bg-white/5 translate-y-2 z-20 pointer-events-none duration-400 transition-all"
       ></div>
 
-      <div className="relative items-center w-full flex justify-around shadow-lg shadow-black/50 transition-all rounded-full py-2 px-2 backdrop-blur-2xl bg-white/4">
+      <div className="relative items-center w-full flex justify-around shadow-lg shadow-black/50 transition-all rounded-full py-2 px-2 backdrop-blur-2xl bg-white/5">
         {routes.map((route) => (
           <Link
             key={route.name}
