@@ -16,7 +16,6 @@ import {
   projectCategories,
 } from "@/lib/utils";
 import cineverseImage from "@/../public/cineverse.png";
-import noImage from "@/../public/no-image.jpg"
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -77,7 +76,7 @@ export default function Projects() {
 					width={1080}
 					height={720}
                               src={project.image}
-                              className={`w-full ${project.image ? "" : "opacity-30"} max-xl:max-h-[70vh] min-h-[50vh] h-full`}
+                              className={`w-full ${project.image ? "" : "opacity-30"} h-full w-full text-lg max-xl:max-h-[70vh] min-h-[50vh] h-full`}
                             /> : <div className="min-h-[50vh] bg-black/50 flex items-center justify-center">NO IMAGE</div>}
                           </div>
 
