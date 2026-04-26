@@ -153,7 +153,7 @@ export default function Home() {
 					height={720}
                               src={projects[0].image}
                               className={`w-full ${projects[0].image ? "" : "opacity-30"} max-xl:max-h-[70vh] min-h-[50vh] h-full`}
-                            /> : <div className="min-h-[50vh] bg-black/50 w-full h-full text-lg flex items-center justify-center">NO IMAGE</div>}
+                            /> : <div className="min-h-[50vh] text-xl flex items-center justify-center">NO IMAGE</div>}
                     </div>
 
                     <div className="absolute flex flex-col shadow-lg shadow-black/40 py-4 px-6 gap-2 bottom-3 left-3 bg-white/5 max-w-2/3 backdrop-blur-xl rounded-3xl">

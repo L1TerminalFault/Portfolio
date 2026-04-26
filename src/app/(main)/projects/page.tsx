@@ -76,8 +76,8 @@ export default function Projects() {
 					width={1080}
 					height={720}
                               src={project.image}
-                              className={`w-full ${project.image ? "" : "opacity-30"} h-full w-full text-lg max-xl:max-h-[70vh] min-h-[50vh] h-full`}
-                            /> : <div className="min-h-[50vh] bg-black/50 flex items-center justify-center">NO IMAGE</div>}
+                              className={`w-full ${project.image ? "" : "opacity-30"} h-full w-full max-xl:max-h-[70vh] min-h-[50vh] h-full`}
+                            /> : <div className="min-h-[50vh] flex items-center text-xl justify-center">NO IMAGE</div>}
                           </div>
 
                           <div className="absolute flex flex-col py-4 px-6 gap-2 bottom-3 left-3 bg-white/5 max-w-2/3 backdrop-blur-xl shadow-lg shadow-black/40 rounded-3xl">
