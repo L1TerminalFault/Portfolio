@@ -10,7 +10,7 @@ import MongoDBIcon from "@/../public/mongodb.ico";
 import ClerkIcon from "@/../public/clerk.png";
 import TiltedCard from "@/app/components/TiltedCard";
 import { projects, projectStatuses, techStacks } from "@/lib/utils";
-import noImage from "@/../public/no-image.png";
+import noImage from "@/../public/no-image.jpg";
 
 export const metadata: Metadata = {
   title: "Home",
