@@ -8,10 +8,10 @@ export default function FloatingElement() {
     <div className="absolute w-full bottom-25 flex items-end justify-end">
       <Link
         href="/about"
-        className="bg-white/5 flex hover:bg-white/9 gap-3 active:bg-white/3 group shadow-lg shadow-black/50 transition-colors backdrop-blur-2xl rounded-l-full p-4"
+        className="bg-white/5 flex items-center justify-center hover:bg-white/9 gap-3 active:bg-white/3 group shadow-lg shadow-black/50 transition-colors backdrop-blur-2xl rounded-l-full p-4"
       >
-        <BsPerson />
-        <div className="text-sm group-hover:max-w-30 /group-hover: max-h-10 /max-h-0 max-w-0 overflow-hidden transition-all">
+        <BsPerson className="size-20" />
+        <div className="text-sm group-hover:max-w-30 text-nowrap /group-hover: max-h-10 /max-h-0 max-w-0 overflow-hidden transition-all">
           More About Me
         </div>
       </Link>

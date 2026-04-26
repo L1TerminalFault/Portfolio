@@ -15,7 +15,7 @@ export default function MainLayout({
         <div className="absolute z-0 top-0 left-0 w-full h-full/ h-2/3">
           <DarkVeil />
         </div>
-        <div className="absolute z-10 flex flex-col /backdrop-blur-lg w-full h-full bg-black/20">
+	{/*<div className="absolute z-10 flex flex-col /backdrop-blur-lg w-full h-full bg-black/20">*/}
           <TitleBar />
           <div className="pt-24 p-9 w-full h-full //bg-gray-950 ">
             {children}
@@ -25,7 +25,7 @@ export default function MainLayout({
           {/* <div className="absolute bottom-0 opacity-20 w-full"> */}
           {/*   <ShapeGrid speed={0.1} /> */}
           {/* </div> */}
-        </div>
+	  {/*</div>*/}
       </div>
     </div>
   );
