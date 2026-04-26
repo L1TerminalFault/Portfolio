@@ -24,7 +24,7 @@ const serviceList = [
   {
     name: "Custom Software Development",
     icon: Custom,
-    detail: "Any stack, any scale software development (Rust, Go)",
+    detail: "Any stack, any scale software development including Rust, Go",
   },
 ]
 
