@@ -74,8 +74,10 @@ export default function Projects() {
                           <div className="h-full z-0 w-max /group-hover:opacity-60 transition-all duration-400">
                             <Image
                               alt=""
+					width={1080}
+					height={720}
                               src={project.image || noImage}
-                              className="w-full max-xl:max-h-[70vh] h-full"
+                              className="w-full max-xl:max-h-[60vh] h-full"
                             />
                           </div>
 
@@ -98,8 +100,6 @@ export default function Projects() {
                                     >
                                       <Image
                                         alt=""
-					width={1080}
-					height={720}
                                         src={each.icon}
                                         className="size-6 rounded-full"
                                       />
