@@ -25,13 +25,13 @@ export default function Projects() {
   return (
     <div className="flex w-full h-full slide-to-left items-center justify-center">
       <div className="flex w-full h-full max-w-425">
-        <div className="relative flex flex-col gap-9 w-full h-full pt-24 p-9 overflow-scroll scrollbar-hidden">
+        <div className="relative flex flex-col gap-9 w-full h-full pt-26 p-9 overflow-scroll scrollbar-hidden">
           {projectCategories.map((eachCat) => (
             <div
               key={eachCat.index}
               className={`relative flex flex-col w-full h-max gap-4 ${projects.find((project) => eachCat.index === project.category) ? "" : "hidden"}`}
             >
-              <div className="text-gray-400 2xl:ml-50 ml-14 flex justify-center w-max px-7 py-2 rounded-full backdrop-blur-xl bg-white/5 gap-2 z-40 items-center top-0 sticky">
+              <div className="text-gray-400 2xl:ml-50 ml-14 flex justify-center shadow-md shadow-black/50 w-max px-7 py-2 rounded-full backdrop-blur-xl bg-white/5 gap-2 z-40 items-center top-0 sticky">
                 {eachCat.text}
                 <GoDotFill className="text-[6px] text-center" />
                 {
