@@ -16,7 +16,7 @@ import {
   projectCategories,
 } from "@/lib/utils";
 import cineverseImage from "@/../public/cineverse.png";
-import noImage from "@/../public/no-image.jpg
+import noImage from "@/../public/no-image.jpg"
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -98,6 +98,8 @@ export default function Projects() {
                                     >
                                       <Image
                                         alt=""
+					width={1080}
+					height={720}
                                         src={each.icon}
                                         className="size-6 rounded-full"
                                       />
