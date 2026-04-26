@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { Metadata } from "next";
 import Link from "next/link";
 import { LuArrowUpRight } from "react-icons/lu";
 
@@ -11,6 +12,10 @@ import MongoDBIcon from "@/../public/mongodb.ico";
 import ClerkIcon from "@/../public/clerk.png";
 import TiltedCard from "@/app/components/TiltedCard";
 import { projects, projectStatuses, techStacks } from "@/lib/utils";
+
+export const metadata: Metadata = {
+  title: "Home",
+}
 
 const preferredTechStack = [
   {
@@ -57,7 +62,7 @@ export default function Home() {
                     <Image alt="" src={each.icon} className="size-6" />
                     {each.name}
 
-                    <div className="absolute max-md:left-0 translate-y-20 z-30 backdrop-blur-xl bg-gray-900/90 /bg-white/5 max-w-120 max-h-0 group-hover:max-h-40 rounded-2xl flex overflow-hidden gap-4 group-hover:p-6 opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-lg shadow-black/50">
+                    <div className="absolute max-md:left-0 translate-y-20 z-50 backdrop-blur-xl bg-gray-900/90 /bg-white/5 max-w-120 max-h-0 group-hover:max-h-40 rounded-2xl flex overflow-hidden gap-4 group-hover:p-6 opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-lg shadow-black/50">
                       <div className="shrink-0">
                         <Image alt="" src={each.icon} className="size-18" />
                       </div>

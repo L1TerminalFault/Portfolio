@@ -1,5 +1,6 @@
 "use client";
 
+import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { LuArrowUpRight } from "react-icons/lu";
@@ -17,6 +18,10 @@ import {
   projectCategories,
 } from "@/lib/utils";
 import cineverseImage from "@/../public/cineverse.png";
+
+export const metadata: Metadata = {
+  title: "Projects",
+}
 
 export default function Projects() {
   return (

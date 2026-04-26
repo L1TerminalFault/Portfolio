@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-black">
       <body
-        className={`${montserrat.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${montserrat.className} ${geistSans.variable} ${geistMono.variable} flex w-screen h-screen antialiased`}
       >
         {children}
       </body>
