@@ -43,12 +43,12 @@ const preferredTechStack = [
 
 export default function Home() {
   return (
-    <div className="flex pt-24 p-9 relative flex-col slide-to-left w-full h-full">
+    <div className="flex relative flex-col slide-to-left w-full h-full">
       <div className="flex w-full h-full items-center justify-center">
         {/* NOTE: Edit global padding just on this div */}
-        <div className="flex max-[850px]:flex-col gap-8 max-w-425 scrollbar-hidden overflow-scroll max-md:py-40 sm:p-8 md:p-12 lg:p-16 xl:p-30 md:items-baseline-last items-end justify-center w-full h-full">
-          <div className="w-full h-full flex flex-col pt-30 pb-5 gap-30 max-2xl:gap-20 max-lg:gap-10 items-center justify-end /max-sm:justify-start">
-            <div className="flex flex-col gap-1 h-max pl-3 w-full z-40 text-gray-400 text-xs fade-in opacity-0">
+        <div className="flex max-[850px]:flex-col gap-8 /pt-45 /pb-15 p-10 max-w-400 scrollbar-hidden overflow-scroll max-md:py-40 sm:p-8 md:p-12 lg:p-16 xl:p-30 md:items-baseline-last items-end justify-center w-full h-full">
+          <div className="w-full h-max flex flex-col pt-30 pb-5 gap-30 max-2xl:gap-20 max-lg:gap-10 items-center justify-end /max-sm:justify-start">
+            <div className="flex flex-col gap-1 h-full pl-3 w-full z-40 text-gray-400 text-xs fade-in opacity-0">
               <div className="px-1">Preferred Tech Stack</div>
 
               <div className="flex /relative gap-2 flex-wrap /z-20">
@@ -77,7 +77,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col pb-30/ gap-4 w-full /h-full justify-end pointer-events-none">
+            <div className="flex flex-col pb-30/ gap-4 w-full p-3 h-max justify-end pointer-events-none">
               <div className="text-5xl/tight slide-to-bottom max-lg:text-4xl/tight max-sm:text-xl/tight font-bold">
                 <SplitText
                   text="Kaleab Mengesha, NextJs developer"

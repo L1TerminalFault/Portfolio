@@ -70,10 +70,10 @@ export default function NavBar() {
   }, [pathname, updatePosition, hoverElement]);
 
   return (
-    <div className="absolute w-full flex justify-center min-[850px]:hidden py-6 px-18 z-20 bottom-0">
+    <div className="absolute w-full flex justify-center min-[850px]:hidden py-6 px-8 z-20 bottom-0">
       <div
         id="nav-select-follower"
-        className="absolute hidden translate-y-2 rounded-full bg-white/6  z-20 pointer-events-none duration-400 transition-all"
+        className="absolute hidden translate-y-2 rounded-full bg-white/8  z-20 pointer-events-none duration-400 transition-all"
       ></div>
 
       <div
@@ -81,7 +81,7 @@ export default function NavBar() {
         className="absolute hidden rounded-full bg-white/5 translate-y-2 z-20 pointer-events-none duration-400 transition-all"
       ></div>
 
-      <div className="relative items-center w-full flex justify-around shadow-lg shadow-black/50 transition-all rounded-full py-2 px-2 backdrop-blur-2xl bg-white/5">
+      <div className="relative items-center w-full max-w-140 flex justify-around shadow-lg shadow-black/50 transition-all rounded-full py-2 px-2 backdrop-blur-2xl bg-white/8">
         {routes.map((route) => (
           <Link
             key={route.name}

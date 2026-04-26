@@ -69,7 +69,7 @@ export default function TitleBar() {
   }, [pathname, updatePosition, hoverElement]);
 
   return (
-    <div className="absolute w-full flex justify-center py-6 px-12 z-20 top-0">
+    <div className="absolute w-full flex justify-center p-6 z-20 top-0">
       <div
         id="select-follower"
         className="absolute hidden rounded-full bg-white/6 translate-y-3.5 z-25 pointer-events-none duration-400 transition-all"
@@ -107,8 +107,8 @@ export default function TitleBar() {
           ))}
         </div>
         <Link
-          href="/"
-          className="py-2 px-6 items-center max-lg:text-sm flex bg-gray-950 rounded-full hover:bg-gray-950/65 active:bg-gray-950/60 transition-all"
+          href="/contact"
+          className={`py-2 px-6 items-center max-lg:text-sm flex rounded-full active:bg-gray-950/60 transition-all ${pathname.includes("/contact") ? "bg-white/9" : "hover:bg-gray-950/55 bg-gray-950"}`}
         >
           Hire Me
         </Link>

@@ -17,10 +17,10 @@ export default function MainLayout({
         </div>
 	{/*<div className="absolute z-10 flex flex-col /backdrop-blur-lg w-full h-full bg-black/20">*/}
           <TitleBar />
-          <div className="w-full h-full //bg-gray-950 ">
+          <div className="w-full h-full z-10 //bg-gray-950 ">
             {children}
           </div>
-          <FloatingElement />
+	  {/*<FloatingElement />*/}
           <NavBar />
           {/* <div className="absolute bottom-0 opacity-20 w-full"> */}
           {/*   <ShapeGrid speed={0.1} /> */}
